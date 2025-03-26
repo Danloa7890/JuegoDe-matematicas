@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Matemáticas Espacial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenido del juego -->
+    <div class="game-content">
+        <h1>¡Misión Espacial!</h1>
+        <p id="timer">Tiempo restante: 60s</p>
+
+        <!-- Ejercicio actual -->
+        <div id="exercise">
+            <p id="question">¿Pregunta?</p>
+            <input type="text" id="answer" placeholder="Escribe tu respuesta...">
+            <button onclick="checkAnswer()">Enviar</button>
+        </div>
+
+        <div id="feedback"></div>
+    </div>
+    <div id="score-container" class="score-container" style="display: none;">
+        <h2 id="final-score">Tu puntaje: 0</h2>
+        <button id="restart-btn">Volver a jugar</button>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>

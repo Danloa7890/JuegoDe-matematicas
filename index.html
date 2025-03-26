@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a la Misión Espacial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Video de fondo -->
+    <div class="video-container">
+        <video autoplay muted loop playsinline id="background-video">
+            <source src="PaginaInicio.mp4" type="video/mp4">
+        
+            Tu navegador no soporta el formato de video.
+        </video>
+    </div>
+
+    <!-- Contenido de la página de inicio -->
+    <div class="content">
+        <h1>¡Bienvenido astronauta!</h1>
+        <p>Estamos seguros de que estás listo para enfrentar las misiones que te hemos encomendado.</p>
+        <button onclick="startGame()">Empezar</button>
+    </div>
+
+    <script src="logica.js"></script>
+</body>
+</html>
