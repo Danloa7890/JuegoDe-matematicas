@@ -1,4 +1,4 @@
-// Definir las preguntas y respuestas
+
 const exercises = [
     // Nivel Básico
     { question: "2 + 2", answer: "4", difficulty: "easy" },
@@ -54,7 +54,7 @@ let score = 0;
 let timer;
 let timeLeft = 60;
 
-// Mostrar la primera pregunta
+
 function showExercise() {
     document.getElementById("question").textContent = exercises[currentExercise].question;
     document.getElementById("answer").value = "";
@@ -67,7 +67,7 @@ function showExercise() {
     startTimer();
 }
 
-// Iniciar el contador
+
 function startTimer() {
     timer = setInterval(() => {
         timeLeft--;
@@ -79,12 +79,12 @@ function startTimer() {
     }, 1000);
 }
 
-// Actualizar el temporizador
+
 function updateTimer() {
     document.getElementById("timer").textContent = `Tiempo restante: ${timeLeft}s`;
 }
 
-// Verificar la respuesta
+
 function checkAnswer() {
     const userAnswer = document.getElementById("answer").value.trim();
     const correctAnswer = exercises[currentExercise].answer;
@@ -110,9 +110,9 @@ function checkAnswer() {
     }
 }
 
-// Mostrar el resultado final
+
 function endGame() {
-    clearInterval(timer); // Asegurar que el temporizador se detenga
+    clearInterval(timer); 
     let resultMessage = "";
     const finalScore = (score / (exercises.length * 10)) * 100;
 
@@ -129,7 +129,7 @@ function endGame() {
     document.querySelector('.score-container').style.display = 'block';
 }
 
-// Reiniciar el juego
+
 function restartGame() {
     currentExercise = 0;
     score = 0;
@@ -138,5 +138,5 @@ function restartGame() {
     showExercise();
 }
 
-// Iniciar el juego
+
 showExercise();
